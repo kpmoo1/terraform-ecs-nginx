@@ -1,3 +1,4 @@
+# creating a ECS cluster
 resource "aws_ecs_cluster" "ecs_cluster" {
   name = "ecs-cluster" 
 }
@@ -21,10 +22,10 @@ resource "aws_ecs_task_definition" "terraform_ecs_task" {
     }
   ]
   DEFINITION
-  requires_compatibilities = ["FARGATE"] 
-  network_mode             = "awsvpc"    
-  memory                   = 512         
-  cpu                      = 256         
+  requires_compatibilities = ["FARGATE"] # using Fargate as the launch type
+  network_mode             = "awsvpc"    # using awsvpc as network mode as this is required for Fargate
+  memory                   = 512         # configuring memory for the container
+  cpu                      = 256         # Configuring cpu for the container
   execution_role_arn       = "${aws_iam_role.ecsTaskExecutionRole.arn}"
 }
 
