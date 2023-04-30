@@ -13,4 +13,4 @@
   Log the load balancer app URL.
 
 ## main.tf
-  Creating ECS cluster and IAM role to set permissions to execute with security group and load balancer to access the containers.
+  Creating ECS cluster and set IAM role so tasks have permissions to execute with security group and load balancer to access the containers.
