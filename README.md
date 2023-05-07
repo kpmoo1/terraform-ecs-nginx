@@ -7,7 +7,7 @@
   Defining variables for easier maintenance and re-usability.
 
 ## vpc.tf
-  Creating default VPC and three subnets to be referenced in the resourse.
+  Creating custom VPC and three subnets to be referenced in the resourse.
   
 ## outputs.tf
   Log the load balancer app URL.
